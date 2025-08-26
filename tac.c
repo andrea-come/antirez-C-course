@@ -53,12 +53,12 @@ int main(int argc, char **argv)
 		line_end++;
         
 		if (c == '\n' || pos == 0) {  // Handle newline or start of file
-		// Print `buf` in reverse order (excluding the newline if present)
+			// Print `buf` in reverse order (excluding the newline if present)
 			int start_idx = (c == '\n') ? line_end - 2 : line_end - 1;
 			for (int j = start_idx; j >= 0; j--) {
 				printf("%c", buf[j]);
 			}
-			printf("\n");  // Add newline after each line
+			printf("\n");  
             
 			// Reset line_end for next line
 			line_end = 0;
